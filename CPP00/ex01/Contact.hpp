@@ -6,37 +6,36 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 20:12:31 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/06 18:29:59 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/10 21:56:19 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#pragma once
 
 #include <iostream>
 #include <string>
 #include <cstdlib>
 
-class Contact					// Cajita "Contact"
+class Contact
 {
 	public:
-			Contact();			//Constructor
-			~Contact();			//Destructor
-		
-			//MÉTODOS
-			void	setFirstName(const std::string &firstName);			// "SETTERS" Llaves para guardar
-			void	setLastName(const std::string &lastName);
-			void	setNickName(const std::string &nickname);
-			void	setPhoneNumber(const std::string &phone_number);
-			void	setDarkestSecret(const std::string &secret);
-			void	initialize();
+			Contact();
+			~Contact();
 
-			//ATRIBUTOS
-			std::string getFirstName();									// "GETTERS" Llaves para ver
+			void		setFirstName(const std::string &_firstName);
+			void		setLastName(const std::string &_lastName);
+			void		setNickName(const std::string &_nickname);
+			void		setPhoneNumber(const std::string &_phone_number);
+			void		setDarkestSecret(const std::string &_secret);
+
+			std::string getFirstName();
 			std::string getLastName();
 			std::string getNickName();
 			std::string getPhoneNumber();
 			std::string getDarkestSecret();
+
+			static bool	ft_isspace_str(const std::string text);
+			void		add();
 
 	private:
 			std::string firstname;
@@ -45,5 +44,3 @@ class Contact					// Cajita "Contact"
 			std::string phone_number;
 			std::string darkestSecret;
 };
-
-#endif
