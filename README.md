@@ -31,81 +31,81 @@ Este repositorio contiene el código fuente para los módulos de C++. Cada módu
 
 | Ejercicio                                         | Objetivos                                                                 |
 |--------------------------------------------------|----------------------------------------------------------------------------|
-| **[Ejercicio 00: BraiiiiiiinnnzzzZ](cpp01/ex00/)**| Introducción a asignación de memoria e implementación de clases           |
-| **[Ejercicio 01: Moar brainz!](cpp01/ex01/)**     | Práctica avanzada con asignación de memoria y punteros                    |
-| **[Ejercicio 02: HI THIS IS BRAIN](cpp01/ex02/)** | Técnicas avanzadas de gestión de memoria                                  |
-| **[Ejercicio 03: Unnecessary violence](cpp01/ex03/)**| Implementar clases con comportamientos complejos                         |
-| **[Ejercicio 04: Sed is for losers](cpp01/ex04/)**| Características avanzadas de C++ y operaciones con archivos               |
-| **[Ejercicio 05: Harl 2.0](cpp01/ex05/)**         | Trabajar con implementaciones avanzadas de clases                         |
-| **[Ejercicio 06: Harl filter](cpp01/ex06/)**      | Filtrar y gestionar estructuras de datos complejas                        |
+| **[Ejercicio 00: BraiiiiiiinnnzzzZ]**| Introducción a asignación de memoria e implementación de clases           |
+| **[Ejercicio 01: Moar brainz!]**     | Práctica avanzada con asignación de memoria y punteros                    |
+| **[Ejercicio 02: HI THIS IS BRAIN]** | Técnicas avanzadas de gestión de memoria                                  |
+| **[Ejercicio 03: Unnecessary violence]**| Implementar clases con comportamientos complejos                         |
+| **[Ejercicio 04: Sed is for losers]**| Características avanzadas de C++ y operaciones con archivos               |
+| **[Ejercicio 05: Harl 2.0]**         | Trabajar con implementaciones avanzadas de clases                         |
+| **[Ejercicio 06: Harl filter]**      | Filtrar y gestionar estructuras de datos complejas                        |
 
 ### Módulo 02: Polimorfismo Ad-hoc y Sobrecarga de Operadores
 
 | Ejercicio                                                 | Objetivos                                                                |
 |----------------------------------------------------------|--------------------------------------------------------------------------|
-| **[Ejercicio 00: My First Class in Orthodox Canonical Form](cpp02/ex00/)** | Implementar una clase en forma canónica                                   |
-| **[Ejercicio 01: Towards a more useful fixed-point number class](cpp02/ex01/)** | Mejorar la clase de punto fijo                                            |
-| **[Ejercicio 02: Now we're talking](cpp02/ex02/)**        | Implementar características avanzadas en la clase de punto fijo           |
-| **[Ejercicio 03: BSP](cpp02/ex03/)**                      | Implementar Binary Space Partitioning                                     |
+| **[Ejercicio 00: My First Class in Orthodox Canonical Form]** | Implementar una clase en forma canónica                                   |
+| **[Ejercicio 01: Towards a more useful fixed-point number class]** | Mejorar la clase de punto fijo                                            |
+| **[Ejercicio 02: Now we're talking]**        | Implementar características avanzadas en la clase de punto fijo           |
+| **[Ejercicio 03: BSP]**                      | Implementar Binary Space Partitioning                                     |
 
 ### Módulo 03: Herencia y Encapsulación
 
 | Ejercicio                                         | Objetivos                                                                |
 |--------------------------------------------------|---------------------------------------------------------------------------|
-| **[Ejercicio 00: Aaaaand... OPEN!](cpp03/ex00/)** | Implementar una clase básica con atributos y funciones específicas        |
-| **[Ejercicio 01: Serena, my love!](cpp03/ex01/)** | Crear una clase derivada con constructores y funciones específicas        |
-| **[Ejercicio 02: Repetitive work](cpp03/ex02/)**  | Implementar otra clase derivada con atributos y funciones específicas     |
-| **[Ejercicio 03: Now it’s weird!](cpp03/ex03/)**  | Crear una clase compleja que hereda de múltiples clases                   |
+| **[Ejercicio 00: Aaaaand... OPEN!]** | Implementar una clase básica con atributos y funciones específicas        |
+| **[Ejercicio 01: Serena, my love!]** | Crear una clase derivada con constructores y funciones específicas        |
+| **[Ejercicio 02: Repetitive work]**  | Implementar otra clase derivada con atributos y funciones específicas     |
+| **[Ejercicio 03: Now it’s weird!]**  | Crear una clase compleja que hereda de múltiples clases                   |
 
 ### Módulo 04: Polimorfismo y Clases Abstractas
 
 | Ejercicio                                         | Objetivos                                                                |
 |--------------------------------------------------|---------------------------------------------------------------------------|
-| **[Ejercicio 00: Polymorphism](cpp04/ex00/)**     | Implementar polimorfismo en clases                                        |
-| **[Ejercicio 01: I don’t want to set the world on fire](cpp04/ex01/)** | Implementar copias profundas y gestionar memoria dinámica                |
-| **[Ejercicio 02: Abstract class](cpp04/ex02/)**   | Implementar clases abstractas para evitar instanciación de clases base    |
-| **[Ejercicio 03: Interface & recap](cpp04/ex03/)**| Implementar interfaces y asegurar comprensión de conceptos del módulo     |
+| **[Ejercicio 00: Polymorphism]**     | Implementar polimorfismo en clases                                        |
+| **[Ejercicio 01: I don’t want to set the world on fire]** | Implementar copias profundas y gestionar memoria dinámica                |
+| **[Ejercicio 02: Abstract class]**   | Implementar clases abstractas para evitar instanciación de clases base    |
+| **[Ejercicio 03: Interface & recap]**| Implementar interfaces y asegurar comprensión de conceptos del módulo     |
 
 ### Módulo 05: Repetición y Excepciones
 
 | Ejercicio                                         | Objetivos                                                                 |
 |--------------------------------------------------|---------------------------------------------------------------------------|
-| **[Ejercicio 00: Mommy, when I grow up, I want to be a bureaucrat!](cpp05/ex00/)** | Implementar clase Bureaucrat con excepciones personalizadas para notas inválidas |
-| **[Ejercicio 01: Form up, maggots!](cpp05/ex01/)** | Crear clase Form con atributos específicos y funcionalidad de firma      |
-| **[Ejercicio 02: No, you need form 28B, not 28C...](cpp05/ex02/)** | Implementar clases de formularios concretos que heredan de una clase abstracta |
-| **[Ejercicio 03: At least this beats coffee-making](cpp05/ex03/)** | Crear clase Intern que genera formularios basados en parámetros          |
+| **[Ejercicio 00: Mommy, when I grow up, I want to be a bureaucrat!]** | Implementar clase Bureaucrat con excepciones personalizadas para notas inválidas |
+| **[Ejercicio 01: Form up, maggots!]** | Crear clase Form con atributos específicos y funcionalidad de firma      |
+| **[Ejercicio 02: No, you need form 28B, not 28C...]** | Implementar clases de formularios concretos que heredan de una clase abstracta |
+| **[Ejercicio 03: At least this beats coffee-making]** | Crear clase Intern que genera formularios basados en parámetros          |
 
 ### Módulo 06: Casts en C++
 
 | Ejercicio                                         | Objetivos                                                                |
 |--------------------------------------------------|---------------------------------------------------------------------------|
-| **[Ejercicio 00: Conversion of scalar types](cpp06/ex00/)** | Implementar clase ScalarConverter para convertir representaciones de cadenas a tipos escalares |
-| **[Ejercicio 01: Serialization](cpp06/ex01/)**    | Crear clase Serializer para convertir punteros a enteros sin signo       |
-| **[Ejercicio 02: Identify real type](cpp06/ex02/)**| Implementar clases Base, A, B y C para identificar tipos reales de objetos |
+| **[Ejercicio 00: Conversion of scalar types]** | Implementar clase ScalarConverter para convertir representaciones de cadenas a tipos escalares |
+| **[Ejercicio 01: Serialization]**    | Crear clase Serializer para convertir punteros a enteros sin signo       |
+| **[Ejercicio 02: Identify real type]**| Implementar clases Base, A, B y C para identificar tipos reales de objetos |
 
 ### Módulo 07: Plantillas en C++
 
 | Ejercicio                                         | Objetivos                                                                 |
 |--------------------------------------------------|----------------------------------------------------------------------------|
-| **[Ejercicio 00: Start with a few functions](cpp07/ex00/)** | Implementar plantillas básicas de funciones (swap, min, max)               |
-| **[Ejercicio 01: Iter](cpp07/ex01/)**             | Implementar plantilla de función iter para aplicar función a cada elemento |
-| **[Ejercicio 02: Array](cpp07/ex02/)**            | Desarrollar plantilla de clase Array con comportamiento específico        |
+| **[Ejercicio 00: Start with a few functions]** | Implementar plantillas básicas de funciones (swap, min, max)               |
+| **[Ejercicio 01: Iter]**             | Implementar plantilla de función iter para aplicar función a cada elemento |
+| **[Ejercicio 02: Array]**            | Desarrollar plantilla de clase Array con comportamiento específico        |
 
 ### Módulo 08: Contenedores Templatizados, Iteradores, Algoritmos
 
 | Ejercicio                                         | Objetivos                                                                 |
 |--------------------------------------------------|----------------------------------------------------------------------------|
-| **[Ejercicio 00: Easy find](cpp08/ex00/)**        | Implementar plantilla easyfind para buscar enteros en contenedores         |
-| **[Ejercicio 01: Span](cpp08/ex01/)**             | Desarrollar clase Span para gestionar colecciones de enteros               |
-| **[Ejercicio 02: Mutated abomination](cpp08/ex02/)** | Crear clase MutantStack que haga una pila iterable                        |
+| **[Ejercicio 00: Easy find]**        | Implementar plantilla easyfind para buscar enteros en contenedores         |
+| **[Ejercicio 01: Span]**             | Desarrollar clase Span para gestionar colecciones de enteros               |
+| **[Ejercicio 02: Mutated abomination]** | Crear clase MutantStack que haga una pila iterable                        |
 
 ### Módulo 09: Biblioteca Estándar (STL)
 
 | Ejercicio                                         | Objetivos                                                                 |
 |--------------------------------------------------|----------------------------------------------------------------------------|
-| **[Ejercicio 00: Bitcoin Exchange](cpp09/ex00/)** | Crear programa para calcular valor de bitcoin usando base de datos CSV     |
-| **[Ejercicio 01: Reverse Polish Notation](cpp09/ex01/)** | Implementar evaluador de expresiones en Notación Polaca Inversa           |
-| **[Ejercicio 02: PmergeMe](cpp09/ex02/)**         | Desarrollar programa para ordenar secuencias con algoritmo merge-insert   |
+| **[Ejercicio 00: Bitcoin Exchange]** | Crear programa para calcular valor de bitcoin usando base de datos CSV     |
+| **[Ejercicio 01: Reverse Polish Notation]** | Implementar evaluador de expresiones en Notación Polaca Inversa           |
+| **[Ejercicio 02: PmergeMe]**         | Desarrollar programa para ordenar secuencias con algoritmo merge-insert   |
 
 ## Reglamentos
 
