@@ -23,7 +23,7 @@ Este repositorio contiene el código fuente para los módulos de C++. Cada módu
 
 | Ejercicio                                         | Objetivos                                                                 |
 |--------------------------------------------------|----------------------------------------------------------------------------|
-| **[Ejercicio 00: Megaphone]([cpp00/ex00/](https://github.com/pablooglez/Cpp_Modules/tree/main/CPP00))**        | Implementar un programa simple para repetir entrada en mayúsculas          |
+| **[Ejercicio 00: Megaphone](https://github.com/pablooglez/Cpp_Modules/tree/main/CPP00/ex00)**        | Implementar un programa simple para repetir entrada en mayúsculas          |
 | **[Ejercicio 01: My Awesome PhoneBook](cpp00/ex01/)** | Crear una agenda telefónica usando clases y POO                            |
 | **[Ejercicio 02: The Job Of Your Dreams](cpp00/ex02/)** | Recrear un archivo perdido para una aplicación bancaria                   |
 
