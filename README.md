@@ -5,7 +5,7 @@ Este repositorio contiene el código fuente para los módulos de C++. Cada módu
 
 | #   | Módulo                                 | Introducción          | Temas Cubiertos                                                                 | Lenguaje | Estado | Comentarios                              |
 |-----|----------------------------------------|-----------------------|-------------------------------------------------------------------------------|----------|--------|---------------------------------------|
-| 00  | [Módulo 00](cpp00/)                    | Introducción a C++   | Namespaces, clases, funciones miembro, flujos stdio, listas de inicialización, static, const | C++      | ✅ 100  | Conceptos básicos de C++               |
+| 00  | [Módulo 00](cpp00/)                    | Introducción a C++   | Namespaces, clases, funciones miembro, flujos stdio, listas de inicialización, static, const | C++      | ✅ 80  | Conceptos básicos de C++               |
 | 01  | [Módulo 01](cpp01/)                    | Memoria alocada, punteros | Asignación de memoria, punteros a miembros, referencias, sentencia switch     | C++      | Ongoing  | Conceptos intermedios                  |
 | 02  | [Módulo 02](cpp02/)                    | Polimorfismo ad-hoc, sobrecarga de operadores | Polimorfismo ad-hoc, sobrecarga de operadores, forma canónica ortodoxa de clases | C++      | Ongoing  | Conceptos avanzados                    |
 | 03  | [Módulo 03](cpp03/)                    | Herencia y Encapsulación | Herencia, encadenamiento de constructores/destructores, jerarquías de clases, especificadores de acceso, funciones miembro especiales | C++      | Ongoing  | Conceptos de herencia y encapsulación  |
