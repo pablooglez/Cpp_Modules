@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 13:31:27 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/13 18:34:42 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/13 18:31:20 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/13 20:02:19 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ class Zombie
 			Zombie();
 			~Zombie();
 
-			void			announce (void) const;
-			void			setName(std::string const &new_name);
-			std::string		getName();
-
+			void		announce (void) const;
+			void		setName(std::string const &new_name);
+			std::string	getName();
 	private:
-			std::string name;
+		std::string name;
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* zombieHorde(int N, std::string name);

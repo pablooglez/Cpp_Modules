@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/13 13:11:52 by pablogon          #+#    #+#              #
-#    Updated: 2025/03/13 18:21:27 by pablogon         ###   ########.fr        #
+#    Created: 2025/03/13 18:28:14 by pablogon          #+#    #+#              #
+#    Updated: 2025/03/13 20:05:10 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = Horde
 
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 

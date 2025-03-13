@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 13:31:27 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/13 18:34:42 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/13 18:31:04 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/13 18:47:01 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Zombie.hpp"
 
-#include <iostream>
-#include <string>
-
-class Zombie
+Zombie::Zombie()
 {
-	public:
-			Zombie();
-			~Zombie();
+	this->name = "default";
+}
 
-			void			announce (void) const;
-			void			setName(std::string const &new_name);
-			std::string		getName();
+Zombie::~Zombie()
+{
+	std::cout << this->name << ": Delete Zombie" << std::endl;
+}
 
-	private:
-			std::string name;
-};
+void	Zombie::announce(void) const
+{
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+void	Zombie::setName(std::string const &new_name)
+{
+	this->name = new_name;
+}
+
+std::string Zombie::getName()
+{
+	return (this->name);
+}
