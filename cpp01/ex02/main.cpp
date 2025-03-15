@@ -5,29 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 13:31:14 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/14 18:40:45 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/14 18:12:16 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/14 18:33:09 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-int	main(void)
+int	main()
 {
-	Zombie a;
+	std::string stringVAR = "HI THIS IS BRAIN";
 
-	a.announce();
+	std::string *stringPTR = &stringVAR;
+
+	std::string &stringREF = stringVAR;
+
+	std::cout << "Memory of stringVAR: "<< &stringVAR << std::endl;
+	std::cout << "Memory of stringPTR: "<< stringPTR << std::endl;
+	std::cout << "Memory of stringREF: "<< &stringREF << std::endl;
+
+	std::cout << "Value of stringVAR: "<< stringVAR << std::endl;
+	std::cout << "Value of stringPTR: "<< *stringPTR << std::endl;
+	std::cout << "Value of stringREF: "<< stringREF << std::endl;
 	
-	randomChump("Pipi");
-	
-	Zombie	*i = newZombie("Pepe");
-	Zombie	*j = newZombie("Popo");
-
-	i->announce();
-	j->announce();
-
-	delete	j;
-	delete	i;
-
-	return (0);
 }

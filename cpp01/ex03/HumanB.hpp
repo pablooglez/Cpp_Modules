@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 13:31:35 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/14 18:40:09 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/14 18:37:31 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/15 21:24:14 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-Zombie::Zombie()
-{
-	this->name = "default";
-}
+#include "Weapon.hpp"
+#include <iostream>
 
-Zombie::~Zombie()
+class HumanB
 {
-	std::cout << this->name << ": Delete Zombie" << std::endl;
-}
+	public:
+			HumanB(std::string _name, Weapon &_weapon);
+			HumanB(std::string _name);
+			~HumanB();
 
-void	Zombie::announce (void) const
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void	Zombie::setName(const std::string &new_name)
-{
-	this->name = new_name;
-}
-
-std::string	Zombie::getName()
-{
-	return (this->name);
-}
+			void	attack();
+	private:
+			std::string name;
+			Weapon &weapon;
+};
