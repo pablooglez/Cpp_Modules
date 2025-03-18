@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 18:37:15 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/15 21:39:37 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/18 20:12:14 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ Weapon::Weapon()
 	return;
 }
 
+Weapon::Weapon(std::string new_type)
+{
+	this->type = new_type;
+}
 Weapon::~Weapon()
 {
 	return;
@@ -31,3 +35,4 @@ std::string Weapon::getType()
 {
 	return(this->type);
 }
+

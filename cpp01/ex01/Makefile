@@ -6,7 +6,7 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/13 18:28:14 by pablogon          #+#    #+#              #
-#    Updated: 2025/03/13 20:05:10 by pablogon         ###   ########.fr        #
+#    Updated: 2025/03/18 20:40:00 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 
 CC = clang++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 #-------COLORS---------#
 RED     := \033[31;1m

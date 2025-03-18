@@ -6,32 +6,38 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 18:37:33 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/15 21:40:01 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/18 20:48:02 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string _name, Weapon &_weapon)
+HumanB::HumanB()
 {
-	this->name = _name;
-	this->weapon = _weapon;
+	std::cout << "HumanB created" << std::endl;
 }
 
-HumanB::HumanB(std::string _name)
+HumanB::HumanB(std::string name) : name(name), weapon(NULL)
 {
-	this->name = _name;
+	std::cout << "HumanB created" << std::endl;
 }
 
 HumanB::~HumanB()
 {
-	return;
+	std::cout << "HumanB destroyed" << std::endl;
+}
+
+void	HumanB::setWeapon(Weapon &weapon)
+{
+	this->weapon = &weapon;
 }
 
 void	HumanB::attack()
 {
-	if (weapon.getType().empty())
-		std::cout << this->name << " is unarmed" << std::endl;
-	else
-		std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
+	if (!weapon)
+	{
+		std::cout << this->name << ": has not a weapon to attack" << std::endl;
+		return;
+	}
+	std::cout << this->name << ": attacks with their: " << weapon->getType() << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 18:37:26 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/15 21:38:22 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/18 20:12:21 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 
 class Weapon
 {
-	public:
-			Weapon();
-			~Weapon();
+		public:
+				Weapon();
+				Weapon(std::string new_type);
+				~Weapon();
+				
+				void		setType(std::string const &new_type);
+				std::string	getType();
 
-			void		setType(std::string const &new_type);
-			std::string	getType();
-	private:
-			std::string type;
+		private:
+				std::string type;
 };

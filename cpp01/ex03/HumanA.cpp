@@ -6,24 +6,23 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 18:37:38 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/15 21:39:51 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/18 20:48:06 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string _name, Weapon &_weapon) // : weapon(_weapon) {}
+HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
 {
-	this->name = _name;
-	this->weapon = _weapon;
+	std::cout << "HumanA created" << std::endl;
 }
 
 HumanA::~HumanA()
 {
-	return;
+	std::cout << "HumanA destroyed" << std::endl;
 }
 
 void	HumanA::attack()
 {
-	std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
+	std::cout << this->name << ": attacks with their: " << weapon.getType() << std::endl;
 }
