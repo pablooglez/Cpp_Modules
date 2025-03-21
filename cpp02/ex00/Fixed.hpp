@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/19 17:01:19 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/19 17:54:45 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/20 19:52:23 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/21 15:30:01 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#pragma once
 
-int	main(int argc, char **argv)
+#include <iostream>
+
+class Fixed
 {
-	Harl harl;
+		public:
+				Fixed();
+				Fixed(const Fixed &obj);
+				Fixed &operator = (const Fixed &obj);
+				~Fixed();
 
-	if (argc != 2)
-	{
-		std::cout << " Error: Incorrect number of arguments" << std::endl;
-		return (1);
-	}
-	harl.complain(argv[1]);
-	return (0);
-}
+				void setRawBits(int const raw);
+				int getRawBits(void) const;
+		private:
+				int	value;
+				static const int bits = 8;
+};

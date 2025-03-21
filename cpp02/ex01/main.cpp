@@ -5,22 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/19 17:01:19 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/19 17:54:45 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/21 18:09:24 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/21 18:44:42 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
 
-int	main(int argc, char **argv)
+int main(void)
 {
-	Harl harl;
+	Fixed a;
+	Fixed const b(10);
+	Fixed const c(42.42f);
+	Fixed const d(b);
 
-	if (argc != 2)
-	{
-		std::cout << " Error: Incorrect number of arguments" << std::endl;
-		return (1);
-	}
-	harl.complain(argv[1]);
+	a = Fixed(1234.4321f);
+	
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+	
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	
 	return (0);
 }

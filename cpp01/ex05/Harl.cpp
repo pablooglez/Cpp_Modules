@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 17:01:36 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/19 17:43:43 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:55:10 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ Harl::~Harl()
 	return;
 }
 
-// Método que toma un nivel como argumento
-
 void	Harl::complain(std::string level)
 {
-	std::string function[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};		//Array de strings con los nombres de los niveles
+	std::string function[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-	void(Harl::*ptrfc[4])()= {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};		//Array de punteros a funciones miembros de la clase Harl
+	void(Harl::*ptrfc[4])()= {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	if (level == "DEBUG")
 		return (this->*ptrfc[0])();

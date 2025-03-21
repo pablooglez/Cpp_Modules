@@ -5,42 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 18:28:21 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/19 18:04:09 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/21 19:35:43 by pablogon          #+#    #+#             */
+/*   Updated: 2025/03/21 19:43:38 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-int	main(void)
+int main( void )
 {
-	int	i;
-	int	N;
-	
-	i = 0;
-	N = 2;
-	
-	Zombie* horde = zombieHorde(N, "Horde");
-	Zombie *alianza = zombieHorde(N, "Ally");
-	
-	std::cout << "Name array Horde" << std::endl;
-	while(i < N)
-	{
-		horde[i].announce();
-		i++;
-	}
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	i = 0;
-	std::cout << "Name array Ally" << std::endl;
-	while(i < N)
-	{
-		alianza[i].announce();
-		i++;
-	}
-
-	std::cout << "Delete horde" << std::endl;
-	delete[] horde;
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
 	
-	std::cout << "Delete Alianza" << std::endl;
-	delete[] alianza;
+	return (0);
 }
