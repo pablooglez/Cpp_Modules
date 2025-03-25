@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 19:35:43 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/21 19:43:38 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/25 21:50:59 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int main( void )
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
+	
+	
 	std::cout << Fixed::max( a, b ) << std::endl;
 	
 	return (0);

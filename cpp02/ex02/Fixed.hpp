@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 19:35:36 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/21 19:43:33 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/25 20:35:05 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,32 @@ class Fixed
 				
 				void setRawBits(int const raw);
 				int getRawBits(void) const;
+
+				// Comparison Operators
+				bool operator>(const Fixed &obj) const;
+				bool operator<(const Fixed &obj) const;
+				bool operator>=(const Fixed &obj) const;
+				bool operator<=(const Fixed &obj) const;
+				bool operator==(const Fixed &obj) const;
+				bool operator!=(const Fixed &obj) const;
+
+				// Arithmetic Operators
+				Fixed operator+(const Fixed &obj);
+				Fixed operator-(const Fixed &obj);
+				Fixed operator*(const Fixed &obj);
+				Fixed operator/(const Fixed &obj);
+
+				// Increment / Decrement
+				Fixed &operator++();
+				Fixed operator++(int);
+				Fixed &operator--();
+				Fixed operator--(int);
+				
+				// Four overloaded member fuctions
+				static Fixed &min(Fixed &a, Fixed &b);
+				static const Fixed &min(const Fixed &a, const Fixed &b);
+				static Fixed &max(Fixed &a, Fixed &b);
+				static const Fixed &max(const Fixed &a, const Fixed &b);
 
 		private:
 				int	value;

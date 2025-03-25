@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:09:31 by pablogon          #+#    #+#             */
-/*   Updated: 2025/03/21 19:04:57 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/03/25 20:28:32 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ class Fixed
 				static const int bits = 8;
 };
 
-std::ostream &operator<<(std::ostream &out, const Fixed &fixed); // Declaración operador de inserción
+// Insertion operator declaration
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
