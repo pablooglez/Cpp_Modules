@@ -6,13 +6,13 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/28 18:21:51 by pablogon          #+#    #+#              #
-#    Updated: 2025/03/28 18:23:08 by pablogon         ###   ########.fr        #
+#    Updated: 2025/04/01 14:42:51 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
 
-SRC = main.cpp Animal.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 
