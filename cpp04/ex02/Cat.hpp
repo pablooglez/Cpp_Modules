@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 18:22:12 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/01 17:17:54 by pablogon         ###   ########.fr       */
+/*   Created: 2025/03/31 20:05:50 by pablogon          #+#    #+#             */
+/*   Updated: 2025/04/01 19:38:27 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
-int main()
+class Cat : public Animal
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+		public:
+				Cat();
+				Cat(const Cat &obj);
+				Cat &operator=(const Cat &obj);
+				~Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+				void	makeSound() const;
 
-	delete meta;
-	delete i;
-	delete j;
+				void				setIdea(std::string _ideas, int i) const;
+				std::string			getIdea(int i) const;
 
-	return (0);
-}
+			private:
+				Brain* attribute;
+};

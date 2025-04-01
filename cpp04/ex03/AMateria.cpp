@@ -1,31 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 18:22:30 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/01 19:32:58 by pablogon         ###   ########.fr       */
+/*   Created: 2025/04/01 19:50:30 by pablogon          #+#    #+#             */
+/*   Updated: 2025/04/01 19:50:31 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include <iostream>
-
-class Animal
-{
-		public:
-				Animal();
-				Animal(const Animal &obj);
-				Animal &operator=(const Animal &obj);
-				virtual ~Animal();
-	
-				virtual void	makeSound() const;
-				std::string getType() const;
-
-				
-		protected:
-				std::string type;
-};

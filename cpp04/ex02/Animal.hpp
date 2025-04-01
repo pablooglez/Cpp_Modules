@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 18:22:30 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/01 19:32:58 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/01 19:39:27 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Animal
 				Animal &operator=(const Animal &obj);
 				virtual ~Animal();
 	
-				virtual void	makeSound() const;
+				virtual void	makeSound() const = 0;
 				std::string getType() const;
 
 				

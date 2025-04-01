@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 18:22:30 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/01 19:32:58 by pablogon         ###   ########.fr       */
+/*   Created: 2025/04/01 19:50:39 by pablogon          #+#    #+#             */
+/*   Updated: 2025/04/01 19:55:13 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,9 @@
 
 #include <iostream>
 
-class Animal
+class AMateria
 {
 		public:
-				Animal();
-				Animal(const Animal &obj);
-				Animal &operator=(const Animal &obj);
-				virtual ~Animal();
-	
-				virtual void	makeSound() const;
-				std::string getType() const;
-
-				
-		protected:
-				std::string type;
-};
+				AMateria();
+				AMateria(const AMateria &obj);
+}

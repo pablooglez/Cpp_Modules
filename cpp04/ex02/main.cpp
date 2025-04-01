@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 18:22:12 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/01 17:17:54 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/01 19:46:42 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,31 @@
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	Animal *animal = new Dog;
+	Animal *newAnimal = new Cat;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	Dog *dog = new Dog;
+	Cat *cat = new Cat;
+
+	WrongAnimal *wanimal = new WrongCat;
 	
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	animal->makeSound();
+	newAnimal->makeSound();
 
-	delete meta;
-	delete i;
-	delete j;
+	dog->makeSound();
+	cat->makeSound();
+
+	wanimal->makeSound();
+
+	delete animal;
+	delete newAnimal;
+	delete dog;
+	delete cat;
+	delete wanimal;
 
 	return (0);
 }
