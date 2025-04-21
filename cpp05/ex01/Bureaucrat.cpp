@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 15:44:41 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/21 23:14:23 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/21 23:14:16 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Bureaucrat::Bureaucrat()
 {
-	
+
 }
 
 Bureaucrat::~Bureaucrat()
@@ -57,6 +57,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 	{
 		std::cerr << e.what();
 	}
+
 }
 
 const std::string &Bureaucrat::getName() const
@@ -73,10 +74,10 @@ void	Bureaucrat::incrementGrade()
 {
 	try
 	{
-		if (_grade - 1 < 1)
-		throw GradeTooHightException();
+		if (this->_grade - 1 < 1)
+			throw GradeTooHightException();
 		else
-		_grade--;
+			this->_grade--;
 	}
 	catch(const std::exception& e)
 	{
@@ -89,10 +90,10 @@ void	Bureaucrat::decrementGrade()
 {
 	try
 	{
-		if (_grade + 1 > 150)
+		if (this->_grade + 1 > 150)
 			throw GradeTooLowException();
 		else
-			_grade++;
+			this->_grade++;
 	}
 	catch(const std::exception& e)
 	{
@@ -101,20 +102,34 @@ void	Bureaucrat::decrementGrade()
 	
 }
 
+void	Bureaucrat::signForm(Form &obj)
+{
+	try
+	{
+		obj.beSigned(*this);
+
+		std::cout << _name << " signed " << obj.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << _name << " couldn't sign " << obj.getName() << " because "  << e.what() << std::endl;
+	}
+}
+
 const char* Bureaucrat::GradeTooHightException::what() const throw()
 {
-	return "EXCEPTION Grade too hight!\n";
+	return "Grade too hight!\n";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 
-	return "EXCEPTION Grade too low!\n";
+	return "Grade too low!\n";
 }
 
-std::ostream &operator<<(std::ostream &out, const Bureaucrat &Bureaucrat)
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &obj)
 {
-	out << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade() << "." << std::endl;
-	
+	out << obj.getName() << ", bureaucrat grade " << obj.getGrade() << "." << std::endl;
+
 	return (out);
 }
