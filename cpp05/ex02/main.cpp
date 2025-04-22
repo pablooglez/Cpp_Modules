@@ -6,63 +6,55 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:28:37 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/22 12:58:04 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/22 20:11:32 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int	main()
+int main()
 {
-	std::cout << "===== TEST 1: FORMULARIO NORMAL =====" << std::endl;
 	try
 	{
-		// Crear un burócrata de alto nivel y uno de bajo nivel
-		Bureaucrat jefe("Director", 5);
-		Bureaucrat asistente("Asistente", 140);
+		Bureaucrat jefe("Jefe", 5);
+		Bureaucrat empleado("Empleado", 45);
 
-		// Crear un formulario que requiere nivel 100 para firmar
-		AForm permiso("Permiso de ausencia", 100, 50);
+		std::cout << jefe;
+		std::cout << empleado;
 
-		std::cout << "Formulario creado: " << permiso << std::endl;
 
-		// El asistente intentará firmar (debería fallar)
-		std::cout << "Intento de firma por asistente:" << std::endl;
-		asistente.signForm(permiso);
+		ShrubberyCreationForm jardin("jardin");
+		RobotomyRequestForm robot("robot");
+		PresidentialPardonForm perdon("prisionero");
 
-		// El director intentará firmar (debería tener éxito)
-		std::cout << "\nIntento de firma por director:" << std::endl;
-		jefe.signForm(permiso);
+		std::cout << "\n//-----FIRMANDO FORMULARIOS-----//\n" << std::endl;
+		jefe.signForm(jardin);
+		jefe.signForm(robot);
+		jefe.signForm(perdon);
 
-		// Intentar firmar de nuevo (debería indicar que ya está firmado)
-		std::cout << "\nIntento de firma repetida:" << std::endl;
-		jefe.signForm(permiso);
+		std::cout << "\n//-----EJECUTANDO FORMULARIOS-----//\n" << std::endl;
+		jefe.executeForm(jardin);
+		jefe.executeForm(robot);
+		jefe.executeForm(perdon);
+
+
+		std::cout << "\n//-----INTENTOS DEL EMPLEADO-----//\n" << std::endl;
+		empleado.executeForm(jardin);  // (lvl 45 < 137)
+		empleado.executeForm(robot);   // (lvl 45 = 45)
+		empleado.executeForm(perdon);  // No (lvl 45 > 5)
+
+		std::cout << "\n//-----CASO ESPECIAL: SIN FIRMA-----//\n" << std::endl;
+		ShrubberyCreationForm sinFirma("parque");
+		empleado.executeForm(sinFirma);  // Fail because is not sign
 	}
-	catch (const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cout << "Error: " << e.what() << std::endl;
+		std::cerr << "Excepción: " << e.what();
 	}
-
-	std::cout << "\n===== TEST 2: EXCEPCIONES =====" << std::endl;
-	try
-	{
-		std::cout << "Intentando crear formulario con grado sign inválido (151):" << std::endl;
-		AForm invalido("Formulario inválido", 151, 50);  // Debería lanzar excepción
-	}
-	catch (const std::exception& e)
-	{
-		std::cout << "Error capturado: " << e.what() << std::endl;
-	}
-
-	try
-	{
-		std::cout << "\nIntentando crear formulario con grado execute inválido (0):" << std::endl;
-		AForm invalido("Formulario inválido", 50, 0);  // Debería lanzar excepción
-	}
-	catch (const std::exception& e)
-	{
-		std::cout << "Error capturado: " << e.what() << std::endl;
-	}
-	return (0);
+	
+	return(0);
 }

@@ -6,14 +6,14 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/16 15:27:58 by pablogon          #+#    #+#              #
-#    Updated: 2025/04/22 17:08:51 by pablogon         ###   ########.fr        #
+#    Updated: 2025/04/22 19:47:06 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
 
 SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
-		RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+		RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 
