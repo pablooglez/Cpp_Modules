@@ -6,12 +6,12 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:28:37 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/22 12:51:39 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:58:04 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 int	main()
 {
@@ -23,7 +23,7 @@ int	main()
 		Bureaucrat asistente("Asistente", 140);
 
 		// Crear un formulario que requiere nivel 100 para firmar
-		Form permiso("Permiso de ausencia", 100, 50);
+		AForm permiso("Permiso de ausencia", 100, 50);
 
 		std::cout << "Formulario creado: " << permiso << std::endl;
 
@@ -48,7 +48,7 @@ int	main()
 	try
 	{
 		std::cout << "Intentando crear formulario con grado sign inválido (151):" << std::endl;
-		Form invalido("Formulario inválido", 151, 50);  // Debería lanzar excepción
+		AForm invalido("Formulario inválido", 151, 50);  // Debería lanzar excepción
 	}
 	catch (const std::exception& e)
 	{
@@ -58,7 +58,7 @@ int	main()
 	try
 	{
 		std::cout << "\nIntentando crear formulario con grado execute inválido (0):" << std::endl;
-		Form invalido("Formulario inválido", 50, 0);  // Debería lanzar excepción
+		AForm invalido("Formulario inválido", 50, 0);  // Debería lanzar excepción
 	}
 	catch (const std::exception& e)
 	{
