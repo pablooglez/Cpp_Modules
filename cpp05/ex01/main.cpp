@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:28:37 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/22 20:10:09 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:40:51 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main()
 	try
 	{
 		// Create a high-level and a low-level bureaucrat.
-		Bureaucrat jefe("Director", 5);
+		Bureaucrat jefe("Jefe", 5);
 		Bureaucrat asistente("Asistente", 140);
 
 		// Create a form that requires level 100 to sign
