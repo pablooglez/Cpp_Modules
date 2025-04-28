@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 17:39:10 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/25 20:57:49 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/25 21:21:07 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,24 @@ void	ScalarConverter::convert (std::string str)
 			std::cout << "double: " << static_cast<double>(str[0]) << ".0" <<std::endl;
 			break;
 		}
-		case (2)
+		case (2):
+		{
+			std::cout << "char: impossible" << std::endl;
+			std::cout << "int: impossible" << std::endl;
+			
+			if (str == "nanf" || str == "+inff" || str == "-inff")
+			{
+				std::cout << "float: " << str << std::endl;
+				std::cout << "double: " << str.substr(0, str.length() - 1) << std::endl;
+			}
+			else
+			{
+				std::cout << "float: " << str << "f" << std::endl;
+				std::cout << "double: " << str << std::endl;
+			}
+			break;
+		}
+		case (3):
 		{
 			
 		}
