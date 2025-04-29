@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Seralizer.hpp                                      :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 19:37:02 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/29 20:01:38 by pablogon         ###   ########.fr       */
+/*   Created: 2025/04/29 21:02:39 by pablogon          #+#    #+#             */
+/*   Updated: 2025/04/29 21:09:20 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <stdint.h>
-#include "Data.hpp"
 
-class Serializer
+class Base
 {
 	private:
-			Serializer();
-			~Serializer();
-			Serializer(const Serializer &obj);
-			Serializer &operator=(const Serializer &obj);
+
 	public:
-			static uintptr_t serialize(Data* ptr);
-			static Data*	deserialize(uintptr_t raw);
+			virtual ~Base();
 };
+
+Base	*generate(void);
+void	identify(Base* p);
+void	identify(Base& p);

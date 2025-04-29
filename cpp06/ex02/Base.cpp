@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Seralizer.hpp                                      :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 19:37:02 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/29 20:01:38 by pablogon         ###   ########.fr       */
+/*   Created: 2025/04/29 21:11:11 by pablogon          #+#    #+#             */
+/*   Updated: 2025/04/29 21:13:11 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Base.hpp"
 
-#include <iostream>
-#include <stdint.h>
-#include "Data.hpp"
-
-class Serializer
+Base::~Base()
 {
-	private:
-			Serializer();
-			~Serializer();
-			Serializer(const Serializer &obj);
-			Serializer &operator=(const Serializer &obj);
-	public:
-			static uintptr_t serialize(Data* ptr);
-			static Data*	deserialize(uintptr_t raw);
-};
+	std::cout << "Base destructor called" << std::endl;
+}
+
+Base	*generate(void)
+{
+	
+}
+
+void	identify(Base* p)
+{
+	
+}
+
+void	identify(Base& p)
+{
+	
+}

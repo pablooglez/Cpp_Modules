@@ -6,13 +6,13 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/23 17:39:06 by pablogon          #+#    #+#              #
-#    Updated: 2025/04/29 20:08:43 by pablogon         ###   ########.fr        #
+#    Updated: 2025/04/29 21:02:03 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC = main.cpp Serializer.cpp Data.cpp
+SRC = main.cpp Base.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 
