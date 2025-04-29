@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 21:02:39 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/29 21:16:44 by pablogon         ###   ########.fr       */
+/*   Created: 2025/04/29 22:03:45 by pablogon          #+#    #+#             */
+/*   Updated: 2025/04/29 22:05:09 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
-#include <iostream>
-#include <cstdlib> // rand(), srand()
-#include <ctime> // time()
-
-class Base
+int	main()
 {
-	private:
+	Base *random = generate();
 
-	public:
-			virtual ~Base();
-};
+	identify(random);
+	identify(*random);
 
-Base	*generate(void);
-void	identify(Base* p);
-void	identify(Base& p);
+	delete random;
+	return (0);
+}
