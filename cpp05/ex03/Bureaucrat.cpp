@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 15:44:41 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/22 18:11:34 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:26:08 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Bureaucrat::Bureaucrat()
 {
-
 }
 
 Bureaucrat::~Bureaucrat()
