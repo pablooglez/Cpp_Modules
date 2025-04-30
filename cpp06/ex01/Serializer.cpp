@@ -6,11 +6,11 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 19:30:57 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/29 21:03:58 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:57:43 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Seralizer.hpp"
+#include "Serializer.hpp"
 
 Serializer::Serializer()
 {

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Seralizer.hpp                                      :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 19:37:02 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/29 20:01:38 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/04/30 18:01:43 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <stdint.h>
+#include <stdint.h> // uintptr_t
 #include "Data.hpp"
 
 class Serializer

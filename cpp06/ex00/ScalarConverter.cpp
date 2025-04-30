@@ -37,7 +37,6 @@ ScalarConverter	&ScalarConverter::operator=(const ScalarConverter &obj)
 	return *this;
 }
 
-
 int	getType(std::string str) // (1) -> char ; (2) -> nan, inf ; (3) -> int ; (4) -> float ; (5) -> double
 {
 	if (str.length() == 1 && !std::isdigit(str[0]))
