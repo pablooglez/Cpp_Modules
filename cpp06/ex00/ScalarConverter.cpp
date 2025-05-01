@@ -53,12 +53,12 @@ int	getType(std::string str) // (1) -> char ; (2) -> nan, inf ; (3) -> int ; (4)
 		if (str.length() > 0 && (str[str.length() - 1] == 'f' || str[str.length() - 1] == 'F'))
 		{
 			strtof(str.c_str(), &endptr);
-			if (*endptr == 'f' || *endptr == 'F')
+			if (endptr != NULL && (*endptr == 'f' || *endptr == 'F'))
 				return (4);
 		}
 
 		double d = strtod(str.c_str(), &endptr);
-		if (*endptr == '\0')
+		if (endptr != NULL && *endptr == '\0')
 		{
 			if (d == static_cast<long long>(d) && 
 				d <= std::numeric_limits<long>::max() && 
@@ -66,7 +66,7 @@ int	getType(std::string str) // (1) -> char ; (2) -> nan, inf ; (3) -> int ; (4)
 			{
 				endptr = NULL;
 				std::strtol(str.c_str(), &endptr, 10);
-				if (*endptr == '\0')
+				if (endptr != NULL && *endptr == '\0')
 					return (3);
 			}
 			return (5);
@@ -143,7 +143,8 @@ void	ScalarConverter::convert (std::string str)
 		{
 			float f = std::strtof(str.c_str(), NULL);
 
-			if (std::isprint(static_cast<int>(f)) && f == static_cast<int>(f))
+			if (f <= std::numeric_limits<int>::max() && f >= std::numeric_limits<int>::min() &&
+				f == static_cast<int>(f) && std::isprint(static_cast<int>(f)))
 			{
 				std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
 			}
@@ -165,13 +166,21 @@ void	ScalarConverter::convert (std::string str)
 				std::cout << "int: impossible" << std::endl;
 			}
 
-			if (f == static_cast<int>(f))
+			if ((f <= std::numeric_limits<float>::max() && f >= -std::numeric_limits<float>::max()) ||
+				std::isnan(f) || std::isinf(f))
 			{
-				std::cout << "float: " << f << ".0f" << std::endl;
+				if (f == static_cast<int>(f))
+				{
+					std::cout << "float: " << f << ".0f" << std::endl;
+				}
+				else
+				{
+					std::cout << "float: " << f << "f" << std::endl;
+				}
 			}
 			else
 			{
-				std::cout << "float: " << f << "f" << std::endl;
+				std::cout << "float: impossible" << std::endl;
 			}
 
 			if (f == static_cast<int>(f))
@@ -188,8 +197,8 @@ void	ScalarConverter::convert (std::string str)
 		{
 			double d = std::strtod(str.c_str(), NULL);
 
-
-			if (std::isprint(static_cast<int>(d)) && d == static_cast<int>(d))
+			if (d <= std::numeric_limits<int>::max() && d >= std::numeric_limits<int>::min() && 
+				d == static_cast<int>(d) && std::isprint(static_cast<int>(d)))
 			{
 				std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
 			}
