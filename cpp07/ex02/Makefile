@@ -6,13 +6,13 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/02 22:07:37 by pablogon          #+#    #+#              #
-#    Updated: 2025/05/02 22:07:59 by pablogon         ###   ########.fr        #
+#    Updated: 2025/05/05 17:59:22 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC = main.cpp Array.tpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 
