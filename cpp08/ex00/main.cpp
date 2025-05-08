@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 15:33:36 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/08 13:26:12 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/08 20:35:19 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main()
 		{
 			int value = 42;
 			std::vector<int>::iterator resultado = easyfind(numbers, value);
-			std::cout << "Valor " << value << " encontrado en la posición: "
+			std::cout << "Value " << value << " found in the position: "
 					 << std::distance(numbers.begin(), resultado) << std::endl;
 		}
 		catch (const std::exception& e)
@@ -82,7 +82,7 @@ int	main()
 		{
 			int value = 20;
 			std::list<int>::iterator result = easyfind(list, value);
-			std::cout << "Valor " << value << " encontrado en la posición: "
+			std::cout << "Value " << value << " found in the position: "
 					 << std::distance(list.begin(), result) << std::endl;
 		} catch (const std::exception& e)
 		{

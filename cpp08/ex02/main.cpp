@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:56:23 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/08 18:58:17 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/08 21:04:26 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,31 @@ int main()
 	++it;
 	}
 	std::stack<int> s(mstack);
+
+	// Additional test with list for comparison
+	std::cout << "\n=== Comparison with std::list ===" << std::endl;
+	std::list<int> lst;
+	lst.push_back(5);
+	lst.push_back(17);
+
+	std::cout << lst.back() << std::endl;
+	lst.pop_back();
+	std::cout << lst.size() << std::endl;
+
+	lst.push_back(3);
+	lst.push_back(5);
+	lst.push_back(737);
+	lst.push_back(0);
+
+	std::list<int>::iterator lst_it = lst.begin();
+	std::list<int>::iterator lst_ite = lst.end();
+	++lst_it;
+	--lst_it;
+	while (lst_it != lst_ite)
+	{
+		std::cout << *lst_it << std::endl;
+		++lst_it;
+	}
 
 	return (0);
 }

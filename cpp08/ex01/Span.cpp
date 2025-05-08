@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 13:26:29 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/08 14:29:01 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/08 20:36:21 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,33 @@
 
 Span::Span()
 {
-	std::cout << "Span constructor called" << std::endl;
+	//std::cout << "Span constructor called" << std::endl;
 
 	this->_N = 0;
 }
 
 Span::~Span()
 {
-	std::cout << "Span destructor called" << std::endl;
+	//std::cout << "Span destructor called" << std::endl;
 }
 
 Span::Span(unsigned int n)
 {
-	std::cout << "Span constructor with size " << n << " called" << std::endl;
+	//std::cout << "Span constructor with size " << n << " called" << std::endl;
 
 	this->_N = n;
 }
 
 Span::Span(const Span &obj)
 {
-	std::cout << "Span copy constructor called" << std::endl;
+	//std::cout << "Span copy constructor called" << std::endl;
 
 	*this = obj;
 }
 
 Span &Span::operator=(const Span &obj)
 {
-	std::cout << "Span copy assignment operator called" << std::endl;
+	//std::cout << "Span copy assignment operator called" << std::endl;
 
 	if (this != &obj)
 	{
@@ -90,12 +90,4 @@ unsigned int	Span::longestSpan()
 	std::sort(longedspan.begin(), longedspan.end());
 	int ret = longedspan.back() - longedspan[0];
 	return (ret);
-}
-
-void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end)
-{
-	if (std::distance(begin, end) + this->_container.size() > this->_N)
-		throw std::runtime_error("Can't add range, not enough space");
-
-	this->_container.insert(this->_container.end(), begin, end);
 }
