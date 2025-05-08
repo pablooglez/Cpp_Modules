@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/08 13:13:24 by pablogon          #+#    #+#              #
-#    Updated: 2025/05/08 14:30:55 by pablogon         ###   ########.fr        #
+#    Created: 2025/05/08 18:54:00 by pablogon          #+#    #+#              #
+#    Updated: 2025/05/08 18:54:07 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 

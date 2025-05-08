@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 13:26:29 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/08 13:36:13 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/08 14:29:01 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,52 @@ Span &Span::operator=(const Span &obj)
 	return (*this);
 }
 
+void	Span::addNumber(int n)
+{
+	if (_container.size() >= _N)
+	{
+		throw std::runtime_error("Can't add more numbers, container is full");
+	}
+	_container.push_back(n);
+}
+
+unsigned int	Span::shortestSpan()
+{
+	if (_container.size() <= 1)
+	{
+		throw std::runtime_error("Can't calculate shortestSpan, need at least 2 elements");
+	}
+
+	std::vector<int> sortedspan = this->_container;
+	std::sort(sortedspan.begin(), sortedspan.end());
+
+	int ret = sortedspan[1] - sortedspan[0];
+	for (int i = 0; i < (int)this->_container.size() - 1; i++)
+	{
+		if (sortedspan[i + 1] - sortedspan[i] < ret)
+			ret = (sortedspan[i + 1] - sortedspan[i]);
+	}
+	return (ret);
+}
+
+unsigned int	Span::longestSpan()
+{
+	if (_container.size() <= 1)
+	{
+		throw std::runtime_error("Can't calculate longestSpan, need at least 2 elements");
+	}
+
+	std::vector<int> longedspan = this->_container;
+
+	std::sort(longedspan.begin(), longedspan.end());
+	int ret = longedspan.back() - longedspan[0];
+	return (ret);
+}
+
+void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	if (std::distance(begin, end) + this->_container.size() > this->_N)
+		throw std::runtime_error("Can't add range, not enough space");
+
+	this->_container.insert(this->_container.end(), begin, end);
+}
