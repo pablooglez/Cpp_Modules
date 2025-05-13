@@ -1,4 +1,16 @@
 {
+	"editor.renderWhitespace": "all",
+	"editor.renderControlCharacters": true,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"[c]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"[cpp]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
 	"files.associations": {
 		"cctype": "cpp",
 		"clocale": "cpp",
