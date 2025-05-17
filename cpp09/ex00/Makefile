@@ -6,13 +6,13 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/12 16:57:55 by pablogon          #+#    #+#              #
-#    Updated: 2025/05/12 16:58:06 by pablogon         ###   ########.fr        #
+#    Updated: 2025/05/13 18:17:36 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = btc
 
-SRC = main.cpp
+SRC = main.cpp BitcoinExchange.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 

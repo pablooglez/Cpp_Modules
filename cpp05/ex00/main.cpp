@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:28:37 by pablogon          #+#    #+#             */
-/*   Updated: 2025/04/22 12:35:29 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/13 18:48:07 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	main()
 {
-	std::cout << "---------CONSTRUCTORS---------\n" << std::endl;
+	Bureaucrat low("Second", 160);
+
+	std::cout << low << std::endl;
+	/* std::cout << "---------CONSTRUCTORS---------\n" << std::endl;
 
 	Bureaucrat correct("First", 50);
-	Bureaucrat low("Second", 160);
 	Bureaucrat high("Third", 0);
 
 	std::cout << "\n---------VALUES---------\n" << std::endl;
@@ -42,5 +44,5 @@ int	main()
 
 	std::cout << "\n---------DESTRUCTORS---------\n" << std::endl;
 
-	return (0);
+	return (0); */
 }
