@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:33:47 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/17 16:56:57 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/17 17:33:52 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ class BitcoinExchange
 			BitcoinExchange(const BitcoinExchange &obj);
 			BitcoinExchange &operator=(const BitcoinExchange &obj);
 
-			//void	extractInputFile(std::ifstream &filestream);
+			void	extractInputFile(std::ifstream &filestream);
 			void	extractDBFile(std::ifstream &dbstream);
 };
