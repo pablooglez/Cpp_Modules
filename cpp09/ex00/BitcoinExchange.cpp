@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:33:49 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/17 17:33:50 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/17 18:00:25 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &obj)
 	return (*this);
 }
 
-void	BitcoinExchange::extractInputFile(std::ifstream &filestream)
+void	BitcoinExchange::extractInputFile(std::ifstream &filestream) // Proceso el archivo de entrada del usuario
 {
 	std::string line;
 
@@ -102,34 +102,29 @@ void	BitcoinExchange::extractInputFile(std::ifstream &filestream)
 			std::cerr << "Error: too large a number." << std::endl;
 			continue;
 		}
+
+		std::map<std::string, double>::iterator it = _database.lower_bound(dateStr);
 		
-		// Buscar la tasa de cambio directamente aquí
-		std::map<std::string, double>::iterator it = _database.find(dateStr);
-		
-		// Si no se encuentra la fecha exacta, buscar la fecha más cercana anterior
+		// Verificar si no encontramos ninguna fecha
 		if (it == _database.end())
 		{
-			it = _database.lower_bound(dateStr);
-			
-			// Si no hay fechas anteriores o solo hay fechas posteriores
-			if (it == _database.begin() && it->first > dateStr)
+			std::cerr << "Error: no data available for date " << dateStr << std::endl;
+			continue;
+		}
+		
+		// Si la fecha no es exactamente la que buscamos, retrocedemos para obtener la anterior
+		if (it->first != dateStr)
+		{
+			// Pero solo si no estamos al principio del mapa
+			if (it == _database.begin())
 			{
 				std::cerr << "Error: no data available for date " << dateStr << std::endl;
 				continue;
 			}
-			
-			// Si estamos en una fecha posterior, retroceder al registro anterior
-			if (it->first > dateStr && it != _database.begin())
-			{
-				--it;
-			}
+			it--;
 		}
 		
-		// Calcular y mostrar el resultado directamente
-		double exchangeRate = it->second;
-		double result = value * exchangeRate;
-		
-		std::cout << dateStr << " => " << value << " = " << result << std::endl;
+		std::cout << dateStr << " => " << value << " = " << value * it->second << std::endl;
 	}
 }
 
