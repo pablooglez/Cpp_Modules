@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:33:49 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/17 18:00:25 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/19 22:42:09 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,7 @@ void	BitcoinExchange::extractDBFile(std::ifstream &dbstream) // Muestra los arch
 		
 		if (!(valueStream >> value) || !valueStream.eof())
 		{
-			std::cerr << "Error: The value could not be converted to a number: " << line << std::endl;
+		std::cerr << "Error: Bad input => " << line << std::endl;
 			continue;
 		}
 		_database.insert(std::make_pair(date, value));
