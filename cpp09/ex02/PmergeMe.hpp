@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:38 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/21 21:49:42 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/21 22:01:13 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <string> // std::string
 #include <cstring> // strncmp
 #include <utility> // std::pair
+#include <climits> // INT_MAX, INT_MIN
 
 class PmergeMe
 {

@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:33 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/21 21:12:05 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/21 22:01:22 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ void write_error(std::string s)
 
 void check_max(char *s)
 {
-	int i = -1;
-	while (s[++i]) { }
+	long num = strtol(s, NULL, 10);
 	
-	if (i > 11 || (i == 10 && (strncmp("2147483647", s, i) < 0)) || (i == 11 && (strncmp("-2147483648", s, i) < 0)))
-		write_error("Error");
+	if (num > INT_MAX || num < INT_MIN)
+		write_error("Error: número fuera del rango de int");
 }
 
 int main(int argc, char **argv)
