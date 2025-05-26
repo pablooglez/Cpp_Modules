@@ -64,6 +64,7 @@
 		"typeinfo": "cpp",
 		"list": "cpp",
 		"*.tpp": "cpp",
-		"map": "cpp"
+		"map": "cpp",
+		"cstring": "cpp"
 	}
 }

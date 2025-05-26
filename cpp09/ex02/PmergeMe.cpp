@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:36 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/21 21:54:07 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/22 16:08:33 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ std::vector<int> PmergeMe::mergeInsertionSortVector(std::vector<int> vec)
 		else
 			pairs.push_back(std::make_pair(a, b));
 	}
-	
+
 	// Ordenar los pares por sus primeros elementos (los mayores)
 	insertionSortVector(pairs);
 	
