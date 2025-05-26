@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:33 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/21 22:01:22 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/26 17:58:20 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ void check_max(char *s)
 	long num = strtol(s, NULL, 10);
 	
 	if (num > INT_MAX || num < INT_MIN)
-		write_error("Error: número fuera del rango de int");
+		write_error("Error: number outside the range of int");
 }
 
 int main(int argc, char **argv)
 {
+	if (argc < 2)
+		write_error("Error: No arguments. Usage: ./PmergeMe [list of numbers].");
+
 	if (argc > 3001)
 		write_error("Error");
 	
