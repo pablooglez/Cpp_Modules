@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:33:49 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/22 21:21:26 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/26 19:38:56 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,39 @@ void	BitcoinExchange::extractInputFile(std::ifstream &filestream) // Proceso el 
 
 		std::string dateStr = line.substr(0, PosSeparator);
 		std::string valueStr = line.substr(PosSeparator + 3); // +3 para saltar ' | '
+
+		// Validar el formato de la fecha (YYYY-MM-DD)
+		if (dateStr.length() != 10 || dateStr[4] != '-' || dateStr[7] != '-' || 
+			!isdigit(dateStr[0]) || !isdigit(dateStr[1]) || !isdigit(dateStr[2]) || !isdigit(dateStr[3]) ||
+			!isdigit(dateStr[5]) || !isdigit(dateStr[6]) || !isdigit(dateStr[8]) || !isdigit(dateStr[9]))
+		{
+			std::cerr << "Error: bad input => " << line << std::endl;
+			continue;
+		}
+		
+		// Validar que el mes y día sean válidos
+		int year = std::atoi(dateStr.substr(0, 4).c_str());
+		int month = std::atoi(dateStr.substr(5, 2).c_str());
+		int day = std::atoi(dateStr.substr(8, 2).c_str());
+		
+		if (month < 1 || month > 12)
+		{
+			std::cerr << "Error: bad input => " << line << std::endl;
+			continue;
+		}
+		
+		// Validar días según el mes
+		int daysInMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		
+		// Ajuste para años bisiestos
+		if (month == 2 && ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)))
+			daysInMonth[2] = 29;
+			
+		if (day < 1 || day > daysInMonth[month])
+		{
+			std::cerr << "Error: bad input => " << line << std::endl;
+			continue;
+		}
 
 		std::stringstream valueStream(valueStr);
 		float value;

@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:33:47 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/17 17:33:52 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/26 19:39:00 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <fstream> //std::ifstream , open
 #include <sstream>
 #include <map> // std::map
-#include <cstdlib> // exit, EXIT_FAILURE, EXIT_SUCCESS
+#include <cstdlib> // exit, EXIT_FAILURE, EXIT_SUCCESS, atoi
 
 class BitcoinExchange
 {

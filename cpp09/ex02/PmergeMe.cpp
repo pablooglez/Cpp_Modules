@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:36 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/22 16:08:33 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/26 20:07:15 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ PmergeMe::PmergeMe()
 	
 }
 
-PmergeMe::~PmergeMe() throw()
+PmergeMe::~PmergeMe()
 {
 	
 }
 
-PmergeMe::PmergeMe(const PmergeMe &obj) throw()
+PmergeMe::PmergeMe(const PmergeMe &obj)
 {
 	(void)obj;
 }
 
-PmergeMe &PmergeMe::operator=(const PmergeMe &obj) throw()
+PmergeMe &PmergeMe::operator=(const PmergeMe &obj)
 {
 	if (this == &obj)
 	{

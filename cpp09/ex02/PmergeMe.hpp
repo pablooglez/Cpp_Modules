@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:38 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/21 22:01:13 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/26 19:47:30 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ class PmergeMe
 
 	public:
 			PmergeMe();
-			~PmergeMe() throw();
-			PmergeMe(const PmergeMe &obj) throw();
-			PmergeMe &operator=(const PmergeMe &obj) throw();
+			~PmergeMe();
+			PmergeMe(const PmergeMe &obj);
+			PmergeMe &operator=(const PmergeMe &obj);
 			
 			// std::vector
 			void sortVector(std::vector<int>& vec);
