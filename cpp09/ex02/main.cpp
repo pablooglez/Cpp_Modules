@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:00:33 by pablogon          #+#    #+#             */
-/*   Updated: 2025/05/26 17:58:20 by pablogon         ###   ########.fr       */
+/*   Updated: 2025/05/27 18:24:56 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	while (argv[i])
 	{
 		std::string s = argv[i];
-		if (!is_digits(s))
+		if (s.empty() || !is_digits(s))
 			write_error("Error");
 		i++;
 	}
